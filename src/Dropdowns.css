@@ -1,0 +1,35 @@
+.dropdowns-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+}
+
+.departments {
+  margin-right: 16px;
+  width: 14rem;
+}
+
+.locations {
+  margin-left: 16px;
+  width: 14rem;
+}
+
+.departments-title,
+.locations-title {
+  margin-bottom: 0.625rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  font-family: 'GT Eesti';
+  color: #666666;
+}
+
+.departments-items,
+.locations-items {
+  font-family: 'GT Eesti';
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: normal;
+  color: #333333;
+}

@@ -1,0 +1,60 @@
+.header-container {
+}
+
+.page-title {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: 'GT Eesti';
+  letter-spacing: 0.08rem;
+  color: #666666;
+}
+
+.intro-section {
+  display: flex;
+  margin-top: 7rem;
+  justify-content: center;
+  font-family: 'GT Eesti';
+}
+
+.message {
+  margin-right: 3.5rem;
+}
+
+.message-title {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: 'GT Eesti';
+  line-height: 1.1;
+  color: #333333;
+}
+
+.message-paragraph {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: 'GT Eesti';
+  font-weight: 400;
+  color: #666666;
+}
+
+.message-icon {
+  margin-left: 3.5rem;
+  /* width: 25%; */
+  width: 25rem;
+  height: 25rem;
+}
+
+@media (max-width: 52rem) {
+  .intro-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .message-icon {
+    margin-left: 0rem;
+  }
+}

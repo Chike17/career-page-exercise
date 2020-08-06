@@ -1,0 +1,114 @@
+.job-section {
+  width: 100%;
+}
+
+.department-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 68rem;
+  margin-left: 13rem;
+  margin-bottom: 4rem;
+}
+
+.department-name {
+  display: grid;
+  margin-right: 75rem;
+  grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+  justify-items: center;
+}
+
+.job-listings-container {
+  margin-left: 12rem;
+  margin-right: 20rem;
+}
+
+.job-listings {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr)); */
+  grid-gap: 2rem;
+  justify-items: center;
+  margin-bottom: 6rem;
+}
+
+.department {
+  display: flex;
+  align-items: center;
+  margin-left: 100rem;
+}
+.department-title {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
+  font-family: 'GT Eesti';
+}
+
+.department-name {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.eng-image {
+  width: 2rem;
+  height: 2rem;
+}
+
+.line-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+  justify-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.break {
+  font-size: 1rem;
+  transform: scale(20, 1);
+  color: #cccccc;
+  /* margin-left: rem; */
+}
+.break1,
+.break3 {
+  margin-left: 1rem;
+}
+.break2 {
+  margin-right: 2rem;
+}
+
+/* .break2 {
+  margin-left: 3rem;
+} */
+
+.city {
+  font-size: 1rem;
+  font-family: 'GT Eesti';
+  line-height: 1.25;
+  color: #666666;
+  font-weight: 500;
+}
+
+.role {
+  font-size: 1.5rem;
+  font-family: 'GT Eesti';
+  line-height: 1.25;
+  color: #333333;
+  font-weight: 500;
+}
+
+@media (max-width: 52rem) {
+  .job-listings {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 39.5rem) {
+  .job-listings {
+    grid-template-columns: 100%;
+  }
+}
+
+@media (min-width: 52rem) {
+  .job-listings {
+    grid-template-columns: repeat(auto-fit, minmax(2.3rem, 2fr));
+  }
+}
