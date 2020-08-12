@@ -36,9 +36,15 @@
   }
 }
 
-@media (max-width: 60.75rem) {
+@media (max-width: 70rem) {
   .App {
-    margin-left: 14rem;
+    margin-left: 4rem;
+  }
+}
+
+@media (max-width: 52rem) {
+  .App {
+    margin-left: 15rem;
   }
 }
 

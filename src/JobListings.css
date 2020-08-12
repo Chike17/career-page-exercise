@@ -21,14 +21,19 @@
 .job-listings-container {
   /* margin-left: 12rem; */
   margin-right: 20rem;
-}
-
-.job-listings {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr)); */
   grid-template-columns: 33.3% 33.3% 33.3%;
   grid-column-gap: 3rem;
   margin-bottom: 5rem;
+}
+
+.job-listings {
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr)); */
+  /* grid-template-columns: 33.3% 33.3% 33.3%; */
+  /* grid-column-gap: 3rem; */
+  /* margin-bottom: 5rem; */
 }
 
 .info {
@@ -97,16 +102,16 @@
   }
 } */
 
-@media (max-width: 39.5rem) {
+/* @media (max-width: 39.5rem) {
   .job-listings {
     grid-template-columns: 100%;
   }
-}
+} */
 
 @media (max-width: 52rem) {
-  .job-listings {
+  .job-listings-container {
     grid-template-columns: 50% 50%;
-    grid-column-gap: 1.5rem;
+    grid-column-gap: 4rem;
   }
   .department-title {
     font-size: 1.5rem;
@@ -144,8 +149,8 @@
   }
 } */
 
-@media (max-width: 34.375rem) {
-  .job-listings {
+@media (max-width: 37.5em) {
+  .job-listings-container {
     grid-template-columns: 100%;
   }
   .info {
