@@ -144,7 +144,7 @@
   }
 } */
 
-@media (max-width: 46.875rem) {
+@media (max-width: 34.375rem) {
   .job-listings {
     grid-template-columns: 100%;
   }
