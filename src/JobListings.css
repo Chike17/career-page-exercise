@@ -5,10 +5,10 @@
 .department-type {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-right: 68rem;
-  margin-left: 13rem;
-  margin-bottom: 4rem;
+  /* margin-left: 13rem; */
+  margin-bottom: 3rem;
 }
 
 .department-name {
@@ -19,16 +19,20 @@
 }
 
 .job-listings-container {
-  margin-left: 12rem;
+  /* margin-left: 12rem; */
   margin-right: 20rem;
 }
 
 .job-listings {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr)); */
-  grid-gap: 2rem;
-  justify-items: center;
-  margin-bottom: 6rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr)); */
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-column-gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.info {
+  width: 14rem;
 }
 
 .department {
@@ -54,30 +58,22 @@
   height: 2rem;
 }
 
-.line-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
-  justify-items: center;
-  margin-bottom: 1.5rem;
-}
+/* .line-row { */
+/* display: grid; */
+/* grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr)); */
+/* grid-template-columns: 25% 25% 25% 25%; */
+/* justify-items: flex-start; */
+/* margin-bottom: 1.5rem; */
+/* } */
 
 .break {
   font-size: 1rem;
-  transform: scale(20, 1);
+  /* transform: scale(1.5, 1); */
   color: #cccccc;
+  font-weight: 200rem;
+  margin-bottom: 1.5rem;
   /* margin-left: rem; */
 }
-.break1,
-.break3 {
-  margin-left: 1rem;
-}
-.break2 {
-  margin-right: 2rem;
-}
-
-/* .break2 {
-  margin-left: 3rem;
-} */
 
 .city {
   font-size: 1rem;
@@ -95,11 +91,11 @@
   font-weight: 500;
 }
 
-@media (max-width: 52rem) {
+/* @media (max-width: 52rem) {
   .job-listings {
     grid-template-columns: 50% 50%;
   }
-}
+} */
 
 @media (max-width: 39.5rem) {
   .job-listings {
@@ -107,8 +103,58 @@
   }
 }
 
-@media (min-width: 52rem) {
+@media (max-width: 52rem) {
   .job-listings {
-    grid-template-columns: repeat(auto-fit, minmax(2.3rem, 2fr));
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 1.5rem;
+  }
+  .department-title {
+    font-size: 1.5rem;
+  }
+  .eng-image {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .role {
+    font-size: 1.25rem;
+  }
+  .info {
+    width: 14rem;
+  }
+  .job-listings {
+    margin-bottom: 3rem;
+  }
+  .message-icon {
+    margin-left: 0rem;
+  }
+}
+
+@media (max-width: 57.813rem) {
+  .info {
+    width: 15rem;
+  }
+  .job-listings {
+    grid-column-gap: 5rem;
+  }
+}
+
+/* @media (max-width: 46.875rem) {
+  .job-listings {
+    grid-template-columns: 100%;
+  }
+} */
+
+@media (max-width: 46.875rem) {
+  .job-listings {
+    grid-template-columns: 100%;
+  }
+  .info {
+    margin-bottom: 2.5rem;
+  }
+  .job-listings {
+    margin-bottom: 0rem;
+  }
+  .department-type {
+    margin-top: 3rem;
   }
 }

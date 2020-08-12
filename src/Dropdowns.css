@@ -1,8 +1,9 @@
 .dropdowns-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 5rem;
   margin-bottom: 6rem;
+  margin-left: 22rem;
 }
 
 .departments {
@@ -32,4 +33,29 @@
   line-height: 1.25;
   font-weight: normal;
   color: #333333;
+}
+
+@media (max-width: 52rem) {
+  .departments-items,
+  .locations-items {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 30.625rem) {
+  .dropdowns-container {
+    flex-direction: column;
+  }
+  .departments {
+    margin-bottom: 3rem;
+  }
+  .locations {
+    margin-left: 0rem;
+  }
+}
+
+@media (max-width: 75rem) {
+  .dropdowns-container {
+    margin-left: 0rem;
+  }
 }

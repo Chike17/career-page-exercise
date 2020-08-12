@@ -1,6 +1,3 @@
-.header-container {
-}
-
 .page-title {
   margin-bottom: 1rem;
   font-weight: bold;
@@ -14,7 +11,7 @@
 .intro-section {
   display: flex;
   margin-top: 7rem;
-  justify-content: center;
+  justify-content: flex-start;
   font-family: 'GT Eesti';
 }
 
@@ -52,9 +49,34 @@
 @media (max-width: 52rem) {
   .intro-section {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+  }
+  .message {
+    margin-bottom: 3rem;
+  }
+  .message-title {
+    font-size: 2rem;
+  }
+  .message-paragraph {
+    font-size: 1.25rem;
   }
   .message-icon {
+    width: 20rem;
+    height: 20rem;
+    margin-left: 5.5rem;
+  }
+}
+
+@media (max-width: 40.625rem) {
+  .message-paragraph > * {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 75rem) {
+  .message-icon {
     margin-left: 0rem;
+    margin-right: 5rem;
   }
 }
