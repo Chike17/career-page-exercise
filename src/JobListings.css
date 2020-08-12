@@ -111,7 +111,7 @@
 @media (max-width: 52rem) {
   .job-listings-container {
     grid-template-columns: 50% 50%;
-    grid-column-gap: 4rem;
+    grid-gap: 4rem;
   }
   .department-title {
     font-size: 1.5rem;
@@ -152,6 +152,7 @@
 @media (max-width: 37.5em) {
   .job-listings-container {
     grid-template-columns: 100%;
+    grid-row-gap: 0.05rem;
   }
   .info {
     margin-bottom: 2.5rem;
