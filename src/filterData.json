@@ -33,9 +33,14 @@
       "value": "San Francisco"
     },
     {
-      "key": "New York",
-      "text": "New York",
-      "value": "New York"
+      "key": "New York City",
+      "text": "New York City",
+      "value": "New York City"
+    },
+    {
+      "key": "Remote",
+      "text": "Remote",
+      "value": "Remote"
     }
   ]
 }
