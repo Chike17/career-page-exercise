@@ -2,275 +2,9 @@ import React from 'react';
 import './JobListings.css';
 import _ from 'lodash';
 import filterData from './filterData.json';
-// map the data to use for options
-// import { Label, Icon } from 'semantic-ui-react';
+import * as utils from './utils/utils';
 
-// const JobListings = (props: any) => {
-//   console.log(props.filteredJobData, 'props.filteredJobData');
-//   return (
-//     <div>
-//       {_.map(props.filteredJobData, () => {})}
-//       {/* <div className="department-type">
-//         <img className="eng-image" src="/assets/engineering.png" alt="Error" />
-//         <div className="department-title"> Engineering </div>
-//       </div>
-//       <div className="job-listings-container">
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco </div>
-//           <div className="role"> Backend Engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, Remote </div>
-//           <div className="role"> Backend Engineer, data</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco </div>
-//           <div className="role"> Backend Engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, Remote </div>
-//           <div className="role"> Backend Engineer, data</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco </div>
-//           <div className="role"> Backend Engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, Remote </div>
-//           <div className="role"> Backend Engineer, data</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco </div>
-//           <div className="role"> Backend Engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, Remote </div>
-//           <div className="role"> Backend Engineer, data</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//       </div>
-//       <div className="department-type">
-//         <img className="eng-image" src="/assets/engineering.png" alt="Error" />
-//         <div className="department-title"> Engineering </div>
-//       </div>
-//       <div className="job-listings-container">
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco </div>
-//           <div className="role"> Backend Engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, Remote </div>
-//           <div className="role"> Backend Engineer, data</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco </div>
-//           <div className="role"> Backend Engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, Remote </div>
-//           <div className="role"> Backend Engineer, data</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco </div>
-//           <div className="role"> Backend Engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, Remote </div>
-//           <div className="role"> Backend Engineer, data</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco </div>
-//           <div className="role"> Backend Engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, Remote </div>
-//           <div className="role"> Backend Engineer, data</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//       </div>
-//       <div className="department-type">
-//         <img className="eng-image" src="/assets/engineering.png" alt="Error" />
-//         <div className="department-title"> Engineering </div>
-//       </div>
-//       <div className="job-listings-container">
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco </div>
-//           <div className="role"> Backend Engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, Remote </div>
-//           <div className="role"> Backend Engineer, data</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco </div>
-//           <div className="role"> Backend Engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, Remote </div>
-//           <div className="role"> Backend Engineer, data</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco </div>
-//           <div className="role"> Backend Engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, Remote </div>
-//           <div className="role"> Backend Engineer, data</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco </div>
-//           <div className="role"> Backend Engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, Remote </div>
-//           <div className="role"> Backend Engineer, data</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//         <div className="info">
-//           <div className="break">___________________________</div>
-//           <div className="city"> San Francisco, New York </div>
-//           <div className="role"> Full-stack engineer</div>
-//         </div>
-//       </div> */}
-//     </div>
-//   );
-// };
+const departmentOptions = utils.mapFilterOptions(filterData.departmentOptions);
 
 interface IState {}
 
@@ -286,62 +20,68 @@ interface IProps {
 class JobListings extends React.Component<IProps, IState> {
   constructor(props: any) {
     super(props);
+    this.state = {
+      jobListEmpty: false,
+    };
   }
-  generateDepartmentUI = (department: string) => {
-    const departmentDisplay = (
+
+  generateDepartmentTitle = (department: string) => {
+    if (department === 'All Departments') return;
+    let departmentIcon;
+
+    if (department === 'Marketing') departmentIcon = 'marketing';
+    if (department === 'Engineering') departmentIcon = 'engineering';
+    if (department === 'Customer Success') departmentIcon = 'customer-success';
+
+    return (
       <div>
         <div className="department-type">
           <img
             className="eng-image"
-            src="/assets/engineering.png"
+            src={`/assets/${departmentIcon}.png`}
             alt="Error"
           />
           <div className="department-title"> {department} </div>
         </div>
       </div>
     );
+  };
 
+  generateDepartmentUI = (department: string) => {
     const jobsDisplay: any = [];
     _.forEach(this.props.filteredJobData, (job) => {
-      if (job.department.name.toLowerCase() === department) {
+      const offices = _.map(job.offices, (office) => {
+        return office.name;
+      });
+      if (job.department.name.toLowerCase() === department.toLowerCase()) {
         jobsDisplay.push(
           <div className="info">
             <div className="break">___________________________</div>
-            <div className="city"> {job.offices.toString()} </div>
+            <div className="city"> {offices.join(', ')} </div>
             <div className="role"> {job.title}</div>
           </div>
         );
       }
     });
 
+    if (!jobsDisplay.length) return;
+
     return (
-      <div className="job-listings-container">
-        {departmentDisplay}
-        {jobsDisplay}
+      <div>
+        {this.generateDepartmentTitle(department)}
+        <div className="job-listings-container">{jobsDisplay}</div>{' '}
       </div>
     );
-
-    // <div>
-    //   <div className="department-type">
-    //     <img className="eng-image" src="/assets/engineering.png" alt="Error" />
-    //     <div className="department-title"> {department} </div>
-    //   </div>
-    // </div>;
-
-    //     <div className="department-type">
-    //   <img className="eng-image" src="/assets/engineering.png" alt="Error" />
-    //   <div className="department-title"> Engineering </div>
-    // </div>
-    // <div className="job-listings-container">
-    //   <div className="info">
-    //     <div className="break">___________________________</div>
-    //     <div className="city"> San Francisco </div>
-    //     <div className="role"> Backend Engineer</div>
-    //   </div>
-    //   <div>
   };
+
   render() {
-    return <div></div>;
+    return (
+      <div>
+        {_.map(departmentOptions, (option) => {
+          return this.generateDepartmentUI(option);
+        })}
+      </div>
+    );
   }
 }
 

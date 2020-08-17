@@ -7,8 +7,8 @@
   align-items: center;
   justify-content: flex-start;
   margin-right: 68rem;
-  /* margin-left: 13rem; */
   margin-bottom: 3rem;
+  width: 20rem;
 }
 
 .department-name {
@@ -24,7 +24,7 @@
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr)); */
   grid-template-columns: 33.3% 33.3% 33.3%;
-  grid-column-gap: 3rem;
+  grid-column-gap: 2rem;
   grid-row-gap: 4rem;
   margin-bottom: 5rem;
 }
@@ -48,7 +48,7 @@
 }
 .department-title {
   font-size: 2rem;
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
   font-weight: 500;
   font-family: 'GT Eesti';
 }

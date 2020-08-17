@@ -6,15 +6,17 @@
       "value": "All Departments"
     },
     {
-      "key": "Marketing",
-      "text": "Marketing",
-      "value": "Marketing"
-    },
-    {
       "key": "Engineering",
       "text": "Engineering",
       "value": "Engineering"
     },
+
+    {
+      "key": "Marketing",
+      "text": "Marketing",
+      "value": "Marketing"
+    },
+
     {
       "key": "Customer Success",
       "text": "Customer Success",
