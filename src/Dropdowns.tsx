@@ -1,5 +1,5 @@
 import React from 'react';
-import './Dropdowns.css';
+import './Dropdowns.scss';
 import { Dropdown } from 'semantic-ui-react';
 import filterData from './filterData.json';
 import 'semantic-ui-css/semantic.min.css';

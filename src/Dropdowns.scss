@@ -1,3 +1,7 @@
+$light-grey: #666666;
+$dark-grey: #333333;
+$core-font-family: 'GT Eesti';
+
 .dropdowns-container {
   display: flex;
   justify-content: flex-start;
@@ -21,16 +25,16 @@
   font-size: 0.7rem;
   font-weight: bold;
   letter-spacing: 0.15rem;
-  font-family: 'GT Eesti';
-  color: #666666;
+  font-family: $core-font-family;
+  color: $light-grey;
 }
 
 .items {
-  font-family: 'GT Eesti';
+  font-family: $core-font-family;
   font-size: 1.25rem;
   line-height: 1.25;
   font-weight: normal;
-  color: #333333;
+  color: $dark-grey;
 }
 
 @media (max-width: 52rem) {

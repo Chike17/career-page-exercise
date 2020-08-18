@@ -1,12 +1,12 @@
 import React from 'react';
-import './Header.css';
+import './Header.scss';
 
 const Header = () => {
   return (
     <div className="header-container">
       <div className="intro-section">
         <div className="message">
-          <div className="page-title"> OPEN POSITIONS </div>
+          <div className="message-header"> OPEN POSITIONS </div>
           <div className="message-title">
             <div> Help us create the</div>
             <div> future of software</div>

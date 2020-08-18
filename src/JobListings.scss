@@ -1,0 +1,142 @@
+$light-grey: #666666;
+$dark-grey: #333333;
+$off-white: #cccccc;
+$core-font-family: 'GT Eesti';
+
+.department-container {
+  margin-bottom: 7rem;
+}
+
+.job-listings-container {
+  margin-right: 20rem;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.department-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 68rem;
+  margin-bottom: 3rem;
+  width: 20rem;
+  &-image {
+    width: 2rem;
+    height: 2rem;
+  }
+  &-name {
+    font-size: 2rem;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    font-family: $core-font-family;
+  }
+}
+
+.job-info {
+  width: 17rem;
+  transition: transform 1s;
+  &-city {
+    font-size: 1rem;
+    font-family: $core-font-family;
+    line-height: 1.25;
+    color: $light-grey;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  &-role {
+    font-size: 1.5rem;
+    font-family: $core-font-family;
+    line-height: 1.25;
+    color: $dark-grey;
+    font-weight: 500;
+  }
+  &-break {
+    font-size: 1rem;
+    color: #cccccc;
+    font-weight: 200rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.job-info {
+  width: 17rem;
+  transition: transform 1s;
+}
+
+.job-info:hover {
+  transform: translateY(-1.5rem);
+  transition: transform 1s;
+  cursor: pointer;
+}
+
+.no-result {
+  font-size: 1.5rem;
+  font-family: $core-font-family;
+  line-height: 1.25;
+  color: $light-grey;
+  margin-left: 25rem;
+  margin-top: 15rem;
+  margin-bottom: 30rem;
+}
+
+@media (max-width: 57.813rem) {
+  .info {
+    width: 15rem;
+  }
+  .job-listings {
+    grid-column-gap: 5rem;
+  }
+}
+
+@media (max-width: 52rem) {
+  .department-container {
+    margin-bottom: 5rem;
+  }
+  .job-listings-container {
+    grid-template-columns: 50% 50%;
+    grid-gap: 4rem;
+  }
+  .department-title-name {
+    font-size: 1.5rem;
+    margin-left: 0.9rem;
+  }
+  .department-title-image {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .job-info {
+    width: 14rem;
+  }
+
+  .job-info-role {
+    font-size: 1.25rem;
+  }
+
+  .job-listings {
+    margin-bottom: 3rem;
+  }
+  .no-result {
+    font-size: 1rem;
+    margin-left: 0rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .job-listings-container {
+    grid-template-columns: 100%;
+    grid-row-gap: 0.05rem;
+    margin-bottom: 2rem;
+  }
+  .job-info {
+    margin-bottom: 2.5rem;
+  }
+  .job-listings {
+    margin-bottom: 0rem;
+  }
+  .department-type {
+    margin-top: 3rem;
+  }
+}

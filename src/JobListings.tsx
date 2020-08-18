@@ -1,5 +1,5 @@
 import React from 'react';
-import './JobListings.css';
+import './JobListings.scss';
 import _ from 'lodash';
 import filterData from './filterData.json';
 import * as utils from './utils/utils';
@@ -35,32 +35,32 @@ class JobListings extends React.Component<IProps, IState> {
 
     return (
       <div>
-        <div className="department-type">
+        <div className="department-title">
           <img
-            className="eng-image"
+            className="department-title-image"
             src={`/assets/${departmentIcon}.png`}
             alt="Error"
           />
-          <div className="department-title"> {department} </div>
+          <div className="department-title-name"> {department} </div>
         </div>
       </div>
     );
   };
 
-  generateDepartmentUI = (department: string) => {
+  generateDepartmentUI = (department: string, departmentIndex: number) => {
     const jobsDisplay: any = [];
 
-    _.forEach(this.props.filteredJobData, (job) => {
+    _.forEach(this.props.filteredJobData, (job, index) => {
       const offices = _.map(job.offices, (office) => {
         return office.name;
       });
 
       if (job.department.name.toLowerCase() === department.toLowerCase()) {
         jobsDisplay.push(
-          <div className="info">
-            <div className="break">___________________________</div>
-            <div className="city"> {offices.join(', ')} </div>
-            <div className="role"> {job.title}</div>
+          <div key={index} className="job-info">
+            <div className="job-info-break">___________________________</div>
+            <div className="job-info-city"> {offices.join(', ')} </div>
+            <div className="job-info-role"> {job.title}</div>
           </div>
         );
       }
@@ -69,7 +69,7 @@ class JobListings extends React.Component<IProps, IState> {
     if (!jobsDisplay.length) return null;
 
     return (
-      <div className="job-section">
+      <div key={departmentIndex} className="job-section">
         {this.generateDepartmentTitle(department)}
         <div className="job-listings-container">{jobsDisplay}</div>
       </div>
@@ -80,7 +80,7 @@ class JobListings extends React.Component<IProps, IState> {
     return (
       <Segment basic>
         <div className="job-listings-container">
-          <Dimmer active inverted inline>
+          <Dimmer active inverted inline={'true'}>
             <Loader inverted />
           </Dimmer>
         </div>
@@ -93,8 +93,8 @@ class JobListings extends React.Component<IProps, IState> {
       return this.loader();
     }
 
-    let departmentUI = _.map(departmentOptions, (departmentOption) => {
-      return this.generateDepartmentUI(departmentOption);
+    let departmentUI = _.map(departmentOptions, (departmentOption, index) => {
+      return this.generateDepartmentUI(departmentOption, index);
     });
 
     departmentUI = _.sortBy(departmentUI, (element) => {
