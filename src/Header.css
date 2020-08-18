@@ -16,7 +16,8 @@
 }
 
 .message {
-  margin-right: 3.5rem;
+  margin-right: 2rem;
+  width: 40%;
 }
 
 .message-title {
@@ -40,10 +41,16 @@
 }
 
 .message-icon {
-  margin-left: 3.5rem;
-  /* width: 25%; */
   width: 25rem;
   height: 25rem;
+  background-image: url('/assets/open-positions.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.message-icon:hover {
+  background-image: url('/assets/open-positions.gif');
+  cursor: pointer;
 }
 
 @media (max-width: 52rem) {
@@ -51,44 +58,22 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  /* .message-paragraph > * {
-    display: inline;
-    margin-right: 0.5rem;
-  } */
+
   .message {
     margin-bottom: 3rem;
-    width: 60%;
-    /* padding-right: 4rem; */
+    width: 70%;
   }
+
   .message-title {
     font-size: 2rem;
   }
+
   .message-paragraph {
     display: inline;
-    margin-right: 0.5rem;
     font-size: 1.25rem;
   }
   .message-icon {
     width: 20rem;
     height: 20rem;
-    margin-left: 5.5rem;
-  }
-}
-
-@media (max-width: 40.625rem) {
-  /* .message-paragraph > * {
-    display: inline;
-    margin-right: 0.5rem;
-  } */
-}
-
-@media (max-width: 75rem) {
-  .message-paragraph > * {
-    display: inline;
-    margin-right: 0.5rem;
-  }
-  .message-icon {
-    margin-left: 0rem;
-    margin-right: 5rem;
   }
 }

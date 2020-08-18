@@ -23,6 +23,7 @@ interface IState {
     offices: { id: number; name: string }[];
     department: { id: number; name: string };
   }[];
+  jobsLoading: boolean;
 }
 
 interface Ijob {
@@ -40,6 +41,7 @@ class App extends React.Component<IProps, IState> {
       jobsFiltered: [],
       locationSelect: 'All Locations',
       departmentSelect: 'All Departments',
+      jobsLoading: true,
     };
   }
   componentDidMount() {
@@ -47,9 +49,16 @@ class App extends React.Component<IProps, IState> {
       'https://dl.dropboxusercontent.com/s/90imekuizwoidih/job_listings.json'
     )
       .then((response) => {
-        let data = response.data.jobs;
-        this.setState({ jobs: { ...data }, jobsFiltered: { ...data } }, () => {
-          console.log(this.state.jobsFiltered, 'this.state.jobsFiltered');
+        const data = response.data.jobs;
+        this.setState({ jobsLoading: true }, () => {
+          this.setState(
+            { jobs: { ...data }, jobsFiltered: { ...data } },
+            () => {
+              this.setState({ jobsLoading: false }, () => {
+                console.log(this.state.jobsFiltered, 'this.state.jobsFiltered');
+              });
+            }
+          );
         });
       })
       .catch((error) => {
@@ -126,12 +135,14 @@ class App extends React.Component<IProps, IState> {
   };
 
   render() {
-    // temporary 300vh
     return (
-      <div className="App" style={{ height: '300vh' }}>
+      <div className="App">
         <Header />
         <Dropdowns updateFilterSelection={this.updateFilterSelection} />
-        <JobListings filteredJobData={this.state.jobsFiltered} />
+        <JobListings
+          filteredJobData={this.state.jobsFiltered}
+          jobsLoading={this.state.jobsLoading}
+        />
       </div>
     );
   }

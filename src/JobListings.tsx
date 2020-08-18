@@ -3,6 +3,7 @@ import './JobListings.css';
 import _ from 'lodash';
 import filterData from './filterData.json';
 import * as utils from './utils/utils';
+import { Dimmer, Loader, Segment } from 'semantic-ui-react';
 
 const departmentOptions = utils.mapFilterOptions(filterData.departmentOptions);
 
@@ -15,6 +16,7 @@ interface IProps {
     offices: { id: number; name: string }[];
     department: { id: number; name: string };
   }[];
+  jobsLoading: boolean;
 }
 
 class JobListings extends React.Component<IProps, IState> {
@@ -26,9 +28,7 @@ class JobListings extends React.Component<IProps, IState> {
   }
 
   generateDepartmentTitle = (department: string) => {
-    if (department === 'All Departments') return;
     let departmentIcon;
-
     if (department === 'Marketing') departmentIcon = 'marketing';
     if (department === 'Engineering') departmentIcon = 'engineering';
     if (department === 'Customer Success') departmentIcon = 'customer-success';
@@ -49,10 +49,12 @@ class JobListings extends React.Component<IProps, IState> {
 
   generateDepartmentUI = (department: string) => {
     const jobsDisplay: any = [];
+
     _.forEach(this.props.filteredJobData, (job) => {
       const offices = _.map(job.offices, (office) => {
         return office.name;
       });
+
       if (job.department.name.toLowerCase() === department.toLowerCase()) {
         jobsDisplay.push(
           <div className="info">
@@ -64,24 +66,48 @@ class JobListings extends React.Component<IProps, IState> {
       }
     });
 
-    if (!jobsDisplay.length) return;
+    if (!jobsDisplay.length) return null;
 
     return (
-      <div>
+      <div className="job-section">
         {this.generateDepartmentTitle(department)}
-        <div className="job-listings-container">{jobsDisplay}</div>{' '}
+        <div className="job-listings-container">{jobsDisplay}</div>
       </div>
     );
   };
 
-  render() {
+  loader = () => {
     return (
-      <div>
-        {_.map(departmentOptions, (option) => {
-          return this.generateDepartmentUI(option);
-        })}
-      </div>
+      <Segment basic>
+        <div className="job-listings-container">
+          <Dimmer active inverted inline>
+            <Loader inverted />
+          </Dimmer>
+        </div>
+      </Segment>
     );
+  };
+
+  render() {
+    if (this.props.jobsLoading) {
+      return this.loader();
+    }
+
+    let departmentUI = _.map(departmentOptions, (departmentOption) => {
+      return this.generateDepartmentUI(departmentOption);
+    });
+
+    departmentUI = _.compact(departmentUI);
+
+    if (!departmentUI.length) {
+      return (
+        <div className="no-result">
+          There are no search results for your filter
+        </div>
+      );
+    }
+
+    return <div className="department-container">{departmentUI}</div>;
   }
 }
 

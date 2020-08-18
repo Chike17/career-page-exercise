@@ -1,5 +1,5 @@
-.job-section {
-  width: 100%;
+.department-container {
+  margin-bottom: 7rem;
 }
 
 .department-type {
@@ -19,26 +19,23 @@
 }
 
 .job-listings-container {
-  /* margin-left: 12rem; */
   margin-right: 20rem;
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr)); */
   grid-template-columns: 33.3% 33.3% 33.3%;
   grid-column-gap: 2rem;
   grid-row-gap: 4rem;
   margin-bottom: 5rem;
 }
 
-.job-listings {
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr)); */
-  /* grid-template-columns: 33.3% 33.3% 33.3%; */
-  /* grid-column-gap: 3rem; */
-  /* margin-bottom: 5rem; */
-}
-
 .info {
   width: 17rem;
+  transition: transform 1s;
+}
+
+.info:hover {
+  transform: translateY(-1.5rem);
+  transition: transform 1s;
+  cursor: pointer;
 }
 
 .department {
@@ -64,21 +61,11 @@
   height: 2rem;
 }
 
-/* .line-row { */
-/* display: grid; */
-/* grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr)); */
-/* grid-template-columns: 25% 25% 25% 25%; */
-/* justify-items: flex-start; */
-/* margin-bottom: 1.5rem; */
-/* } */
-
 .break {
   font-size: 1rem;
-  /* transform: scale(1.5, 1); */
   color: #cccccc;
   font-weight: 200rem;
   margin-bottom: 1.5rem;
-  /* margin-left: rem; */
 }
 
 .city {
@@ -97,17 +84,24 @@
   font-weight: 500;
 }
 
-/* @media (max-width: 52rem) {
-  .job-listings {
-    grid-template-columns: 50% 50%;
-  }
-} */
+.no-result {
+  font-size: 1.5rem;
+  font-family: 'GT Eesti';
+  line-height: 1.25;
+  color: #666666;
+  margin-left: 25rem;
+  margin-top: 15rem;
+  margin-bottom: 30rem;
+}
 
-/* @media (max-width: 39.5rem) {
-  .job-listings {
-    grid-template-columns: 100%;
+@media (max-width: 57.813rem) {
+  .info {
+    width: 15rem;
   }
-} */
+  .job-listings {
+    grid-column-gap: 5rem;
+  }
+}
 
 @media (max-width: 52rem) {
   .job-listings-container {
@@ -133,22 +127,14 @@
   .message-icon {
     margin-left: 0rem;
   }
-}
-
-@media (max-width: 57.813rem) {
-  .info {
-    width: 15rem;
+  .no-result {
+    font-size: 1rem;
+    margin-left: 0rem;
   }
-  .job-listings {
-    grid-column-gap: 5rem;
+  .department-container {
+    margin-bottom: 5rem;
   }
 }
-
-/* @media (max-width: 46.875rem) {
-  .job-listings {
-    grid-template-columns: 100%;
-  }
-} */
 
 @media (max-width: 37.5em) {
   .job-listings-container {

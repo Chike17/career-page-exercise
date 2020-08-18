@@ -11,16 +11,15 @@ const Header = () => {
             <div> Help us create the</div>
             <div> future of software</div>
           </div>
-          <div className="message-paragraph">
-            <div>The ability to create software opens up tremendous</div>
-            <div> creative possibilities, and we want to empower people</div>
-            <div>to bring these possibilities to life no matter how</div>
-            <div>ambitious. The good news is that creating software</div>
-            <div>doesn't have to mean writing code. What will</div>
-            <div>you create?</div>
-          </div>
+          <span className="message-paragraph">
+            The ability to create software opens up tremendous creative
+            possibilities, and we want to empower people to bring these
+            possibilities to life no matter how ambitious. The good news is that
+            creating software doesn't have to mean writing code. What will you
+            create?
+          </span>
         </div>
-        <img className="message-icon" src="/assets/open-positions.gif" />
+        <div className="message-icon"> </div>
       </div>
     </div>
   );
