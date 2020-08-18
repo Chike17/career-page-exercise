@@ -8,7 +8,7 @@ const Dropdowns = (props: any) => {
   return (
     <div className="dropdowns-container">
       <div className="departments">
-        <div className="departments-title">DEPARTMENT </div>
+        <div className="departments-title"> DEPARTMENT </div>
         <div className="departments-items">
           <Dropdown
             fluid
