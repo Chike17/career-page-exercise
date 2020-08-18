@@ -3,7 +3,7 @@
   justify-content: flex-start;
   margin-top: 5rem;
   margin-bottom: 6rem;
-  margin-left: 22rem;
+  margin-left: 20rem;
 }
 
 .departments {
@@ -16,8 +16,7 @@
   width: 14rem;
 }
 
-.departments-title,
-.locations-title {
+.title {
   margin-bottom: 0.625rem;
   font-size: 0.7rem;
   font-weight: bold;
@@ -26,8 +25,7 @@
   color: #666666;
 }
 
-.departments-items,
-.locations-items {
+.items {
   font-family: 'GT Eesti';
   font-size: 1.25rem;
   line-height: 1.25;
@@ -36,8 +34,7 @@
 }
 
 @media (max-width: 52rem) {
-  .departments-items,
-  .locations-items {
+  .items {
     font-size: 1rem;
   }
 }

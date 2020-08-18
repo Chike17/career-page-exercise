@@ -8,8 +8,8 @@ const Dropdowns = (props: any) => {
   return (
     <div className="dropdowns-container">
       <div className="departments">
-        <div className="departments-title"> DEPARTMENT </div>
-        <div className="departments-items">
+        <div className="title"> DEPARTMENT </div>
+        <div className="items">
           <Dropdown
             fluid
             selection
@@ -22,8 +22,8 @@ const Dropdowns = (props: any) => {
         </div>
       </div>
       <div className="locations">
-        <div className="locations-title"> LOCATION </div>
-        <div className="locations-items">
+        <div className="title"> LOCATION </div>
+        <div className="items">
           <Dropdown
             fluid
             selection
