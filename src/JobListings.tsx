@@ -94,8 +94,6 @@ class JobListings extends React.Component<IProps, IState> {
     }
 
     let departmentUI = _.map(departmentOptions, (departmentOption) => {
-      console.log(this.generateDepartmentUI(departmentOption));
-
       return this.generateDepartmentUI(departmentOption);
     });
 
