@@ -61,7 +61,11 @@ class JobListings extends React.Component<IProps, IState> {
       }
       if (job.department.name.toLowerCase() === department.toLowerCase()) {
         jobsDisplay.push(
-          <div key={index} className="job-info">
+          <a
+            href={`https://airtable.com/jobs/${job.id}`}
+            key={index}
+            className="job-info"
+          >
             <div
               className={`job-info-break job-info-break-${depHighlightSelect
                 .toLowerCase()
@@ -72,7 +76,7 @@ class JobListings extends React.Component<IProps, IState> {
             </div>
             <div className="job-info-city"> {offices.join(', ')} </div>
             <div className="job-info-role"> {job.title}</div>
-          </div>
+          </a>
         );
         divPushCount++;
       }

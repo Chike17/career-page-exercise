@@ -40,7 +40,7 @@ $customer-success-blue: #2d7ff9;
 }
 
 .job-info {
-  width: 17rem;
+  width: 20rem;
   transition: transform 1s;
   &-city {
     font-size: 1rem;
@@ -73,11 +73,6 @@ $customer-success-blue: #2d7ff9;
   }
 }
 
-.job-info {
-  width: 17rem;
-  transition: transform 1s;
-}
-
 .job-info:hover {
   transform: translateY(-1.5rem);
   transition: transform 1s;
@@ -105,13 +100,9 @@ $customer-success-blue: #2d7ff9;
     font-size: 0.7rem;
   }
 }
-
-@media (max-width: 57.813rem) {
-  .info {
-    width: 15rem;
-  }
-  .job-listings {
-    grid-column-gap: 5rem;
+@media (max-width: 66.875rem) {
+  .job-listings-container {
+    grid-column-gap: 14rem;
   }
 }
 
