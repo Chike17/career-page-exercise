@@ -46,7 +46,7 @@ $core-font-family: 'GT Eesti';
     background-image: url('/assets/open-positions.png');
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
   &-icon:hover {
     background-image: url('/assets/open-positions.gif');
@@ -62,7 +62,7 @@ $core-font-family: 'GT Eesti';
 
   .message {
     margin-bottom: 3rem;
-    width: 70%;
+    width: 50%;
   }
 
   .message-title {
@@ -70,11 +70,11 @@ $core-font-family: 'GT Eesti';
   }
 
   .message-paragraph {
-    display: inline;
     font-size: 1.25rem;
   }
   .message-icon {
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
+    margin-left: 3rem;
   }
 }
