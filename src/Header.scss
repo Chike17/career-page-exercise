@@ -55,21 +55,29 @@ $core-font-family: 'GT Eesti';
   .intro-section {
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 5rem;
   }
 
   .message {
     margin-bottom: 3rem;
     width: 70%;
+    &-header {
+      margin-bottom: 2rem;
+    }
+    &-title {
+      margin-bottom: 1.5rem;
+    }
   }
 
   .message-title {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    // display: block;
+    line-height: 1.1;
   }
 
   .message-paragraph {
     font-size: 1.25rem;
+    line-height: 1.5;
   }
   .message-icon {
     width: 20rem;

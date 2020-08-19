@@ -21,9 +21,10 @@ $core-font-family: 'GT Eesti';
 }
 
 .title {
-  margin-bottom: 0.625rem;
-  font-size: 0.7rem;
-  font-weight: bold;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: normal;
   letter-spacing: 0.15rem;
   font-family: $core-font-family;
   color: $light-grey;
@@ -41,11 +42,16 @@ $core-font-family: 'GT Eesti';
   .items {
     font-size: 1rem;
   }
+  .title,
+  .items {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 30.625rem) {
   .dropdowns-container {
     flex-direction: column;
+    margin-bottom: 5rem;
   }
   .departments {
     margin-bottom: 3rem;
