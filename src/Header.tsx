@@ -8,8 +8,7 @@ const Header = () => {
         <div className="message">
           <div className="message-header"> OPEN POSITIONS </div>
           <div className="message-title">
-            <div> Help us create the</div>
-            <div> future of software</div>
+            <span>Help us create the future of software</span>
           </div>
           <span className="message-paragraph">
             The ability to create software opens up tremendous creative
