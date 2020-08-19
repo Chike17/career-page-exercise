@@ -1,3 +1,5 @@
+FOR ADDITONAL DESIGNS: small, medium, large
+
 1. PREPARATION AND MANAGEMENT: 11.5 hours
    a. tech need analysis (identify stack & third party libraries): 1.5 hours
    b. review styling (standards, assets, accessibility): 1.5 hours
