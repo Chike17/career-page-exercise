@@ -54,9 +54,7 @@ class App extends React.Component<IProps, IState> {
           this.setState(
             { jobs: { ...data }, jobsFiltered: { ...data } },
             () => {
-              this.setState({ jobsLoading: false }, () => {
-                console.log(this.state.jobsFiltered, 'this.state.jobsFiltered');
-              });
+              this.setState({ jobsLoading: false });
             }
           );
         });

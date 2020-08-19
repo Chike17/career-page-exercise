@@ -15,6 +15,6 @@
 
 Consideration:
 
-- When the screen width gets down to 375px I optimized it for a mobile device. For this part of the challenge there was no indication on what that should look like. Leaving it alone with the specs that were indicated did not look good at that width. So I implemented a simple responsive design for it
+- When the screen width gets down to 500px to prepare for it to be decreased down to 375px for an IPhone. For this part of the challenge there was no indication on what that should look like. Leaving the design alone with the specs that were indicated did not look acceptable without this modification so I adapted.
 
 - There was no asset for the colored arrow under every department name. So I just used a regular line. I would be happy to implement it with that asset once I get a hold of it.
