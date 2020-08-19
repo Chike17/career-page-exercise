@@ -20,3 +20,6 @@ Consideration:
 
 - There was no asset for the colored arrow under every department name. So I just used a
   regular line. I would be happy to implement it with that asset once I get a hold of it.
+
+- There is an error in the console: Warning: findDOMNode is deprecated in StrictMode.
+  I can definitely figure out how to get rid of it but I'm submitting now for the sake of time
