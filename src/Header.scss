@@ -41,11 +41,12 @@ $core-font-family: 'GT Eesti';
     color: $light-grey;
   }
   &-icon {
-    width: 25rem;
-    height: 25rem;
+    width: 27rem;
+    height: 27rem;
     background-image: url('/assets/open-positions.png');
     background-size: contain;
     background-repeat: no-repeat;
+    margin-left: 2rem;
   }
   &-icon:hover {
     background-image: url('/assets/open-positions.gif');

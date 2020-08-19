@@ -2,6 +2,9 @@ $light-grey: #666666;
 $dark-grey: #333333;
 $off-white: #cccccc;
 $core-font-family: 'GT Eesti';
+$eng-blue: #18bfff;
+$marketing-red: #f82b60;
+$customer-success-blue: #2d7ff9;
 
 .department-container {
   margin-bottom: 7rem;
@@ -10,8 +13,8 @@ $core-font-family: 'GT Eesti';
 .job-listings-container {
   margin-right: 20rem;
   display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3%;
-  grid-column-gap: 2rem;
+  grid-template-columns: repeat(3, minmax(6rem, 1fr));
+  grid-column-gap: 13rem;
   grid-row-gap: 4rem;
   margin-bottom: 5rem;
 }
@@ -29,7 +32,7 @@ $core-font-family: 'GT Eesti';
   }
   &-name {
     font-size: 2rem;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     font-weight: 500;
     font-family: $core-font-family;
   }
@@ -55,9 +58,17 @@ $core-font-family: 'GT Eesti';
   }
   &-break {
     font-size: 1rem;
-    color: #cccccc;
-    font-weight: 200rem;
+    color: $off-white;
     margin-bottom: 1.5rem;
+  }
+  &-break-marketing {
+    color: $marketing-red;
+  }
+  &-break-engineering {
+    color: $eng-blue;
+  }
+  &-break-customer-success {
+    color: $customer-success-blue;
   }
 }
 
@@ -77,9 +88,21 @@ $core-font-family: 'GT Eesti';
   font-family: $core-font-family;
   line-height: 1.25;
   color: $light-grey;
-  margin-left: 25rem;
+  margin-left: 22rem;
   margin-top: 15rem;
   margin-bottom: 30rem;
+}
+
+@media (max-width: 81.25rem) {
+  .job-info-break {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 58.7rem) {
+  .job-info-break {
+    font-size: 0.7rem;
+  }
 }
 
 @media (max-width: 57.813rem) {
@@ -113,6 +136,10 @@ $core-font-family: 'GT Eesti';
 
   .job-info-role {
     font-size: 1.25rem;
+  }
+
+  .job-info-break {
+    font-size: 0.5rem;
   }
 
   .job-listings {

@@ -35,7 +35,7 @@ class JobListings extends React.Component<IProps, IState> {
 
     return (
       <div>
-        <div className="department-title">
+        <div className={'department-title'}>
           <img
             className="department-title-image"
             src={`/assets/${departmentIcon}.png`}
@@ -49,20 +49,32 @@ class JobListings extends React.Component<IProps, IState> {
 
   generateDepartmentUI = (department: string, departmentIndex: number) => {
     const jobsDisplay: any = [];
+    let divPushCount = 0;
 
     _.forEach(this.props.filteredJobData, (job, index) => {
       const offices = _.map(job.offices, (office) => {
         return office.name;
       });
-
+      let depHighlightSelect = '';
+      if (!divPushCount) {
+        depHighlightSelect = department.toLowerCase().split(' ').join('-');
+      }
       if (job.department.name.toLowerCase() === department.toLowerCase()) {
         jobsDisplay.push(
           <div key={index} className="job-info">
-            <div className="job-info-break">___________________________</div>
+            <div
+              className={`job-info-break job-info-break-${depHighlightSelect
+                .toLowerCase()
+                .split(' ')
+                .join('-')}`}
+            >
+              ________________________________________________________
+            </div>
             <div className="job-info-city"> {offices.join(', ')} </div>
             <div className="job-info-role"> {job.title}</div>
           </div>
         );
+        divPushCount++;
       }
     });
 
