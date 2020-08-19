@@ -15,8 +15,8 @@
 
 Consideration:
 
-- When the screen width gets down to 500px to prepare for it to be decreased down to 375px fo
-  an IPhone. For this part of the challenge there was no indication on what that should look like. Leaving the design alone with the specs that were indicated did not look acceptable without this modification so I adapted.
+- When the screen width gets down to 600px to prepare for it to be decreased down to 375px for
+  an iPhone. For this part of the challenge there was no indication on what that should look like. Leaving the design alone with the specs that were indicated did not look acceptable without this modification so I adapted.
 
 - There was no asset for the colored arrow under every department name. So I just used a
   regular line. I would be happy to implement it with that asset once I get a hold of it.
