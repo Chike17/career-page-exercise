@@ -1,7 +1,7 @@
 import React from 'react';
-import './Dropdowns.scss';
+import '../styles/Dropdowns.scss';
 import { Dropdown } from 'semantic-ui-react';
-import filterData from './filterData.json';
+import filterData from '../filterData.json';
 import 'semantic-ui-css/semantic.min.css';
 
 const Dropdowns = (props: any) => {

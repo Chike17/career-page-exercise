@@ -4,7 +4,7 @@ import _ from 'lodash';
 import Header from './Header';
 import Dropdowns from './Dropdowns';
 import JobListings from './JobListings';
-import './App.scss';
+import '../styles/App.scss';
 
 interface IProps {}
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import './JobListings.scss';
+import '../styles/JobListings.scss';
 import _ from 'lodash';
-import filterData from './filterData.json';
-import * as utils from './utils/utils';
+import filterData from '../filterData.json';
+import * as utils from '../utils/utils';
 import { Dimmer, Loader, Segment } from 'semantic-ui-react';
 
 const departmentOptions = utils.mapFilterOptions(filterData.departmentOptions);
@@ -22,9 +22,6 @@ interface IProps {
 class JobListings extends React.Component<IProps, IState> {
   constructor(props: any) {
     super(props);
-    this.state = {
-      jobListEmpty: false,
-    };
   }
 
   generateDepartmentTitle = (department: string) => {
