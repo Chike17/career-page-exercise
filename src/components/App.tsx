@@ -1,9 +1,9 @@
 import React from 'react';
-import axios from 'axios';
 import _ from 'lodash';
 import Header from './Header';
 import Dropdowns from './Dropdowns';
 import JobListings from './JobListings';
+import jobsData from '../jobs.json';
 import '../styles/App.scss';
 
 interface IProps {}
@@ -45,23 +45,14 @@ class App extends React.Component<IProps, IState> {
     };
   }
   componentDidMount() {
-    axios(
-      'https://dl.dropboxusercontent.com/s/90imekuizwoidih/job_listings.json'
-    )
-      .then((response) => {
-        const data = response.data.jobs;
-        this.setState({ jobsLoading: true }, () => {
-          this.setState(
-            { jobs: { ...data }, jobsFiltered: { ...data } },
-            () => {
-              this.setState({ jobsLoading: false });
-            }
-          );
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    setTimeout(() => {
+      this.setState(
+        { jobs: { ...jobsData.jobs }, jobsFiltered: { ...jobsData.jobs } },
+        () => {
+          this.setState({ jobsLoading: false });
+        }
+      );
+    }, 1000);
   }
 
   filterData = () => {
@@ -92,6 +83,7 @@ class App extends React.Component<IProps, IState> {
       let filteredJobs = this.state.jobs;
       filteredJobs = this.filterLocation(filteredJobs);
       filteredJobs = this.filterDepartment(filteredJobs);
+
       this.setState({ jobsFiltered: { ...filteredJobs } });
     }
   };
