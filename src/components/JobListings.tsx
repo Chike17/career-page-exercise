@@ -32,7 +32,7 @@ class JobListings extends React.Component<IProps, IState> {
 
     return (
       <div>
-        <div className={'department-title'}>
+        <div className="department-title">
           <img
             className="department-title-image"
             src={`/assets/${departmentIcon}.png`}
