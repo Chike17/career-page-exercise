@@ -169,12 +169,6 @@ $customer-success-blue: #2d7ff9;
   }
 }
 
-@media (max-width: 30.625rem) {
-  .loader-container {
-    margin-left: 6rem;
-  }
-}
-
 @media (max-width: 37.5em) {
   .job-listings-container {
     grid-template-columns: 100%;
@@ -189,5 +183,11 @@ $customer-success-blue: #2d7ff9;
   }
   .department-type {
     margin-top: 3rem;
+  }
+}
+
+@media (max-width: 30.625rem) {
+  .loader-container {
+    margin-left: 6rem;
   }
 }
