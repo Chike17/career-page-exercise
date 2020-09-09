@@ -6,7 +6,7 @@ const Header = () => {
     <div className="header-container">
       <div className="intro-section">
         <div className="message">
-          <div className="message-header"> OPEN POSITIONS </div>
+          <div className="message-header">OPEN POSITIONS</div>
           <div className="message-title">
             <span>Help us create the future of software</span>
           </div>

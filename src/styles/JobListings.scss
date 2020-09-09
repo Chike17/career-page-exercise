@@ -19,6 +19,17 @@ $customer-success-blue: #2d7ff9;
   margin-bottom: 7rem;
 }
 
+.loader-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 14rem;
+  margin-left: 34rem;
+}
+
+.dimmer {
+  padding: 0rem;
+}
+
 .department-title {
   display: flex;
   align-items: center;
@@ -95,6 +106,12 @@ $customer-success-blue: #2d7ff9;
   }
 }
 
+@media (max-width: 75rem) {
+  .loader-container {
+    margin-left: 14rem;
+  }
+}
+
 @media (max-width: 58.7rem) {
   .job-info-break {
     font-size: 0.7rem;
@@ -107,6 +124,10 @@ $customer-success-blue: #2d7ff9;
 }
 
 @media (max-width: 52rem) {
+  .loader-container {
+    margin-left: 14rem;
+  }
+
   .department-container {
     margin-bottom: 5rem;
   }
@@ -145,6 +166,12 @@ $customer-success-blue: #2d7ff9;
   .no-result {
     font-size: 1rem;
     margin-left: 0rem;
+  }
+}
+
+@media (max-width: 30.625rem) {
+  .loader-container {
+    margin-left: 6rem;
   }
 }
 

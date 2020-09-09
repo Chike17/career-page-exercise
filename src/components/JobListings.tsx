@@ -91,13 +91,13 @@ class JobListings extends React.Component<IProps, IState> {
 
   loader = () => {
     return (
-      <Segment basic>
-        <div className="job-listings-container">
+      <div className="loader-container">
+        <Segment basic>
           <Dimmer active inverted inline={'true'}>
             <Loader inverted />
           </Dimmer>
-        </div>
-      </Segment>
+        </Segment>
+      </div>
     );
   };
 
